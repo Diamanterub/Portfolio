@@ -107,26 +107,21 @@
 
 })()
 
-//Function to load the portfolio details only to one page instead of 9
+
+//Function to load the portfolio details
 function portfolioDetailsPageSetup(aplication) {
 
     //Sending to portfolio detais
     window.location.assign("portfolio_details.html")
 
-    //Edit content based on the app selected
 
-    // switch(aplication)
-    // {
+    if(localStorage.getItem("project") == null)
+    {
+        localStorage.setItem("project",aplication)
+    }
+    else
+    {
+        localStorage.setItem("project",aplication)
+    }
 
-    //     case 1:
-
-    //         break;
-
-    //         default:
-
-    //             modal.style.display = "none";
-    //             console.log("error")
-    //             alert("error")
-
-    // }
 }
